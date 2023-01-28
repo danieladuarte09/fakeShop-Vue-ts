@@ -1,10 +1,29 @@
 <template>
   <nav>
+    <div class="links">  
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/products">Product List</router-link> |
+    <router-link to="/perfil">Perfil</router-link>
+  </div>
   </nav>
+
+  
   <router-view/>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+
+export default defineComponent({
+  name: 'AppComponents',
+  components:{
+    
+  }
+ 
+})
+</script>
+
 
 <style>
 #app {
@@ -17,14 +36,16 @@
 
 nav {
   padding: 30px;
+  background: #2c3e50;
 }
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: white;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color:  white;
 }
+
 </style>
